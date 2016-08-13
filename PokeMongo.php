@@ -102,6 +102,23 @@ class PokeMongo
     }
 
     /**
+     * @return bool
+     */
+    public function beTheVeryBest()
+    {
+        return $this->mongo->getSlaveOkay();
+    }
+
+    /**
+     * @param bool $electrodude
+     * @return bool
+     */
+    public function thatNoOneEverWas($electrodude)
+    {
+        return $this->mongo->setSlaveOkay($electrodude);
+    }
+
+    /**
      * @return array
      */
     public function transferToProfessor()
