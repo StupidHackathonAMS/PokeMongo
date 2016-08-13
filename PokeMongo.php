@@ -12,7 +12,7 @@ class PokeMongo
 
     /**
      * PokeMongo constructor.
-     * @param MongoClient $brock         Database connection.
+     * @param MongoClient $brock Database connection.
      * @param string      $misty Database name.
      */
     public function __construct(MongoClient $brock, $misty)
@@ -179,5 +179,30 @@ class PokeMongo
         return $this->mongo->forceError();
     }
 
-    public function
+    /**
+     * @return array
+     */
+    public function getType()
+    {
+        return $this->mongo->getReadPreference();
+    }
+
+    /**
+     * @param string $gary
+     * @param array  $oak
+     * @return bool
+     */
+    public function throwPokeball($gary, array $oak)
+    {
+        return $this->mongo->setReadPreference($gary, $oak);
+    }
+
+    /**
+     * @param mixed $nurseJoy
+     * @param int   $officerJenny
+     */
+    public function pickStarter($nurseJoy, $officerJenny)
+    {
+        $this->mongo->setWriteConcern($nurseJoy, $officerJenny);
+    }
 }
