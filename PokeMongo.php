@@ -113,7 +113,7 @@ class PokeMongo
      * @param bool $electrodude
      * @return bool
      */
-    public function thatNoOneEverWas($electrodude)
+    public function likeNoOneEverWas($electrodude)
     {
         return $this->mongo->setSlaveOkay($electrodude);
     }
